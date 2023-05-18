@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Electronic Brands</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="span.css">
+</head>
+
+<style>
+    .brand-card-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .brand-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-width: 200px;
+        height: auto;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .brand-image {
+        width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .brand-name {
+        font-weight: bold;
+    }
+
+    .brand-card:hover {
+        cursor: pointer;
+    }
+
+    .brand-card:active {
+        transform: scale(0.9);
+    }
+
+    h2 {
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Responsive Media Queries */
+    @media screen and (max-width: 800px) {
+        .brand-card-container {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        .brand-card {
+            width: calc(50% - 40px);
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .brand-card {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+  <section id="brands-container">
+    <h2>Featured Brands</h2>
+    <span class="brand-card-container">
+    </span>
+  </section>
+
+  <script src="brandscript.js"></script>
+</body>
+</html>
